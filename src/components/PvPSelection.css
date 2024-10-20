@@ -1,0 +1,90 @@
+.pvpselect-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.pvpselect-back-button {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.pvpselect-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.pvpselect-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.pvpselect-mode {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pvpselect-mode:hover {
+  background-color: #f0f0f0;
+}
+
+.pvpselect-mode.selected {
+  border-color: #007bff;
+  background-color: #e6f2ff;
+}
+
+.pvpselect-mode-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.pvpselect-mode-content {
+  flex: 1;
+}
+
+.pvpselect-mode-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.pvpselect-mode-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.pvpselect-error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.pvpselect-start-battle-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pvpselect-start-battle-button:hover {
+  background-color: #0056b3;
+}
+
+.pvpselect-start-battle-button:not(.visible) {
+  display: none;
+}

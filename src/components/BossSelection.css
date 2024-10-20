@@ -1,0 +1,270 @@
+/* BossSelection.css */
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bossselect-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #1a1a1a;
+  font-family: 'Arial', sans-serif;
+}
+
+.bossselect-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.bossselect-back-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bossselect-back-button:active {
+  transform: translateY(0);
+}
+
+.bossselect-title {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  margin: 0;
+  animation: titleFadeIn 1s ease-out;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.bossselect-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.bossselect-boss {
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.bossselect-boss::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.bossselect-boss-name {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.bossselect-boss-status {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.bossselect-mission {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  z-index: 2;
+}
+
+.bossselect-mission-item {
+  background: linear-gradient(145deg, #64f63f, #3a3a3a);
+  color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 
+    5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.bossselect-mission-item p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bossselect-navigation {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 10;
+}
+
+.bossselect-nav-button {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.bossselect-nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.bossselect-start-battle-button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 18px 36px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #2ecc71;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.bossselect-start-battle-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bossselect-start-battle-button:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.15);
+  background-color: #27ae60;
+}
+
+.bossselect-start-battle-button:active {
+  transform: translateX(-50%) translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bossselect-error-message {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ff6b6b;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+/* Boss Themes */
+.ra-theme {
+  background: url('../images/ra.jpeg') center/cover no-repeat;
+}
+
+.zephyr-theme {
+  background: url('../images/zephyr.jpeg') center/cover no-repeat;
+}
+
+.geb-theme {
+  background: url('../images/geb.jpeg') center/cover no-repeat;
+}
+.thoth-theme {
+  background: url('../images/Thoth.jpeg') center/cover no-repeat;
+}
+.nephthys-theme {
+  background: url('../images/nephthys.jpeg') center/cover no-repeat;
+}
+
+.osiris-theme {
+  background: url('../images/osiris.jpeg') center/cover no-repeat;
+}
+
+.set-theme {
+  background: url('../images/set.jpeg') center/cover no-repeat;
+}
+.isis-theme {
+  background: url('../images/Isis.jpeg') center/cover no-repeat;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bossselect-title {
+    font-size: 2rem;
+    top: 60px;
+  }
+
+  .bossselect-boss-name {
+    font-size: 3rem;
+  }
+
+  .bossselect-boss-status {
+    font-size: 1.5rem;
+  }
+
+  .bossselect-mission-item p {
+    font-size: 1.1rem;
+  }
+
+  .bossselect-start-battle-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}

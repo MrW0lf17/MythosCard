@@ -1,0 +1,67 @@
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.settings-options {
+  margin-bottom: 30px;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.setting label {
+  font-weight: bold;
+}
+
+button, select {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #16213e;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, select:hover {
+  background-color: #0f3460;
+}
+
+.deck-manager {
+  margin-top: 30px;
+}
+
+.deck, .available-cards {
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #16213e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: #0f3460;
+}

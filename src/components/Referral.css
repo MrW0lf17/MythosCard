@@ -1,0 +1,41 @@
+.referral-container {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.referral-container h2 {
+  color: #16213e;
+  margin-bottom: 15px;
+}
+
+.referral-info, .referral-stats, .enter-friend-code {
+  margin-bottom: 20px;
+}
+
+.referral-info p, .referral-stats p {
+  margin: 5px 0;
+}
+
+.referral-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.referral-container button {
+  padding: 10px 20px;
+  background-color: #16213e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.referral-container button:hover {
+  background-color: #0f3460;
+}
